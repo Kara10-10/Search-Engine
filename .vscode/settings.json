@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/../_external/poco"
+    "cmake.sourceDirectory": "${workspaceFolder}/../_external/poco",
+    "C_Cpp.dimInactiveRegions": false
 }

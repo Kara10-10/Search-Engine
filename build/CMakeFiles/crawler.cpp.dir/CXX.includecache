@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/karasloyan/search/linkqueue.cpp
+linkqueue.h
+/home/karasloyan/search/linkqueue.h
+pthread.h
+-
+iostream
+-
+linkqueue.h
+/home/karasloyan/search/linkqueue.h
+pthread.h
+-
+unistd.h
+-
+
+/home/karasloyan/search/linkqueue.h
+string
+-
+queue
+-
+vector
+-
+pthread.h
+-
+set
+-
+string
+-
+queue
+-
+set
+-
+pthread.h
+-
+

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/karasloyan/search/crawler.cpp
+iostream
+-
+stdexcept
+-
+easyhttpcpp/EasyHttp.h
+/home/karasloyan/search/easyhttpcpp/EasyHttp.h
+linkqueue.h
+/home/karasloyan/search/linkqueue.h
+regex.h
+-
+
+/home/karasloyan/search/linkqueue.h
+string
+-
+queue
+-
+set
+-
+pthread.h
+-
+

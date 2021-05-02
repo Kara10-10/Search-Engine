@@ -1,0 +1,3 @@
+/home/karasloyan/search/build/CMakeFiles/rebuild_cache.dir
+/home/karasloyan/search/build/CMakeFiles/edit_cache.dir
+/home/karasloyan/search/build/CMakeFiles/crawler.dir

@@ -20,6 +20,10 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
+//For backwards compatibility, what version of CMake commands and
+// syntax should this version of CMake try to support.
+CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
+
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
@@ -209,6 +213,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Single output directory for building all executables.
+EXECUTABLE_OUTPUT_PATH:PATH=
+
+//Single output directory for building all libraries.
+LIBRARY_OUTPUT_PATH:PATH=
+
 //The directory containing a CMake configuration file for PocoCrypto.
 PocoCrypto_DIR:PATH=/usr/local/lib/cmake/Poco
 
@@ -244,6 +254,12 @@ Project_BINARY_DIR:STATIC=/home/karasloyan/search/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/karasloyan/search
+
+//Value Computed by CMake
+crawler_BINARY_DIR:STATIC=/home/karasloyan/search/build
+
+//Value Computed by CMake
+crawler_SOURCE_DIR:STATIC=/home/karasloyan/search
 
 //The directory containing a CMake configuration file for easyhttpcpp.
 easyhttpcpp_DIR:PATH=/usr/local/lib/cmake/easyhttpcpp
