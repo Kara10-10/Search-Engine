@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/crawler.dir/crawler.o"
+  "CMakeFiles/crawler.dir/indexer.o"
   "CMakeFiles/crawler.dir/linkqueue.o"
+  "CMakeFiles/crawler.dir/repo_in_memory.o"
+  "CMakeFiles/crawler.dir/server.o"
   "crawler"
   "crawler.pdb"
 )

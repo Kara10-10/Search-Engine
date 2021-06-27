@@ -83,16 +83,61 @@ CMakeFiles/crawler.dir/linkqueue.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crawler.dir/linkqueue.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karasloyan/search/linkqueue.cpp -o CMakeFiles/crawler.dir/linkqueue.s
 
+CMakeFiles/crawler.dir/repo_in_memory.o: CMakeFiles/crawler.dir/flags.make
+CMakeFiles/crawler.dir/repo_in_memory.o: ../repo_in_memory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karasloyan/search/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crawler.dir/repo_in_memory.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/crawler.dir/repo_in_memory.o -c /home/karasloyan/search/repo_in_memory.cpp
+
+CMakeFiles/crawler.dir/repo_in_memory.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/crawler.dir/repo_in_memory.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karasloyan/search/repo_in_memory.cpp > CMakeFiles/crawler.dir/repo_in_memory.i
+
+CMakeFiles/crawler.dir/repo_in_memory.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crawler.dir/repo_in_memory.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karasloyan/search/repo_in_memory.cpp -o CMakeFiles/crawler.dir/repo_in_memory.s
+
+CMakeFiles/crawler.dir/indexer.o: CMakeFiles/crawler.dir/flags.make
+CMakeFiles/crawler.dir/indexer.o: ../indexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karasloyan/search/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crawler.dir/indexer.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/crawler.dir/indexer.o -c /home/karasloyan/search/indexer.cpp
+
+CMakeFiles/crawler.dir/indexer.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/crawler.dir/indexer.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karasloyan/search/indexer.cpp > CMakeFiles/crawler.dir/indexer.i
+
+CMakeFiles/crawler.dir/indexer.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crawler.dir/indexer.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karasloyan/search/indexer.cpp -o CMakeFiles/crawler.dir/indexer.s
+
+CMakeFiles/crawler.dir/server.o: CMakeFiles/crawler.dir/flags.make
+CMakeFiles/crawler.dir/server.o: ../server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karasloyan/search/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crawler.dir/server.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/crawler.dir/server.o -c /home/karasloyan/search/server.cpp
+
+CMakeFiles/crawler.dir/server.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/crawler.dir/server.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karasloyan/search/server.cpp > CMakeFiles/crawler.dir/server.i
+
+CMakeFiles/crawler.dir/server.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crawler.dir/server.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karasloyan/search/server.cpp -o CMakeFiles/crawler.dir/server.s
+
 # Object files for target crawler
 crawler_OBJECTS = \
 "CMakeFiles/crawler.dir/crawler.o" \
-"CMakeFiles/crawler.dir/linkqueue.o"
+"CMakeFiles/crawler.dir/linkqueue.o" \
+"CMakeFiles/crawler.dir/repo_in_memory.o" \
+"CMakeFiles/crawler.dir/indexer.o" \
+"CMakeFiles/crawler.dir/server.o"
 
 # External object files for target crawler
 crawler_EXTERNAL_OBJECTS =
 
 crawler: CMakeFiles/crawler.dir/crawler.o
 crawler: CMakeFiles/crawler.dir/linkqueue.o
+crawler: CMakeFiles/crawler.dir/repo_in_memory.o
+crawler: CMakeFiles/crawler.dir/indexer.o
+crawler: CMakeFiles/crawler.dir/server.o
 crawler: CMakeFiles/crawler.dir/build.make
 crawler: /usr/local/lib/libeasyhttp.a
 crawler: /usr/local/lib/libPocoDataSQLite.so.49
@@ -107,7 +152,7 @@ crawler: /usr/local/lib/libPocoFoundation.so.49
 crawler: /usr/lib/x86_64-linux-gnu/libssl.so
 crawler: /usr/lib/x86_64-linux-gnu/libcrypto.so
 crawler: CMakeFiles/crawler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karasloyan/search/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable crawler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karasloyan/search/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable crawler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crawler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

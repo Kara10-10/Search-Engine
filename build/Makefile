@@ -139,6 +139,21 @@ crawler.s:
 .PHONY : crawler.s
 
 # target to build an object file
+indexer.o:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/indexer.o
+.PHONY : indexer.o
+
+# target to preprocess a source file
+indexer.i:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/indexer.i
+.PHONY : indexer.i
+
+# target to generate assembly for a file
+indexer.s:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/indexer.s
+.PHONY : indexer.s
+
+# target to build an object file
 linkqueue.o:
 	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/linkqueue.o
 .PHONY : linkqueue.o
@@ -153,6 +168,36 @@ linkqueue.s:
 	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/linkqueue.s
 .PHONY : linkqueue.s
 
+# target to build an object file
+repo_in_memory.o:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/repo_in_memory.o
+.PHONY : repo_in_memory.o
+
+# target to preprocess a source file
+repo_in_memory.i:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/repo_in_memory.i
+.PHONY : repo_in_memory.i
+
+# target to generate assembly for a file
+repo_in_memory.s:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/repo_in_memory.s
+.PHONY : repo_in_memory.s
+
+# target to build an object file
+server.o:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/server.o
+.PHONY : server.o
+
+# target to preprocess a source file
+server.i:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/server.i
+.PHONY : server.i
+
+# target to generate assembly for a file
+server.s:
+	$(MAKE) -f CMakeFiles/crawler.dir/build.make CMakeFiles/crawler.dir/server.s
+.PHONY : server.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,9 +210,18 @@ help:
 	@echo "... crawler.o"
 	@echo "... crawler.i"
 	@echo "... crawler.s"
+	@echo "... indexer.o"
+	@echo "... indexer.i"
+	@echo "... indexer.s"
 	@echo "... linkqueue.o"
 	@echo "... linkqueue.i"
 	@echo "... linkqueue.s"
+	@echo "... repo_in_memory.o"
+	@echo "... repo_in_memory.i"
+	@echo "... repo_in_memory.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

@@ -5,7 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/karasloyan/search/crawler.cpp" "/home/karasloyan/search/build/CMakeFiles/crawler.dir/crawler.o"
+  "/home/karasloyan/search/indexer.cpp" "/home/karasloyan/search/build/CMakeFiles/crawler.dir/indexer.o"
   "/home/karasloyan/search/linkqueue.cpp" "/home/karasloyan/search/build/CMakeFiles/crawler.dir/linkqueue.o"
+  "/home/karasloyan/search/repo_in_memory.cpp" "/home/karasloyan/search/build/CMakeFiles/crawler.dir/repo_in_memory.o"
+  "/home/karasloyan/search/server.cpp" "/home/karasloyan/search/build/CMakeFiles/crawler.dir/server.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -3,5 +3,18 @@
 
 CMakeFiles/crawler.dir/crawler.o
  /home/karasloyan/search/crawler.cpp
+ /home/karasloyan/search/indexer.hpp
  /home/karasloyan/search/linkqueue.h
+ /home/karasloyan/search/repo.hpp
+ /home/karasloyan/search/repo_in_memory.hpp
+CMakeFiles/crawler.dir/indexer.o
+ /home/karasloyan/search/indexer.cpp
+ /home/karasloyan/search/indexer.hpp
 CMakeFiles/crawler.dir/linkqueue.o
+CMakeFiles/crawler.dir/repo_in_memory.o
+ /home/karasloyan/search/repo.hpp
+ /home/karasloyan/search/repo_in_memory.cpp
+ /home/karasloyan/search/repo_in_memory.hpp
+CMakeFiles/crawler.dir/server.o
+ /home/karasloyan/search/indexer.hpp
+ /home/karasloyan/search/server.cpp

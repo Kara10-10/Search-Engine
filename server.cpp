@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -5,11 +6,17 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <iterator>
+#include <algorithm>
+#include <unistd.h>
+#include "indexer.hpp"
 
 #define ERROR(msg) std::cerr << "Server Error: " << msg << ". " << strerror(errno) << std::endl;
 #define LOG(msg) std::cout << "Server Log: " << msg << std::endl;
 
-int main()
+extern Indexer indexer;
+
+int run_server()
 {
 	//Stream - telephone
 	//Datagram - telegraph
@@ -33,7 +40,7 @@ int main()
 	memset(&addr, 0, sizeof(struct sockaddr_in));
     //peredayom adres strukturi, zapolnyayem nulyami 
 	addr.sin_family = AF_INET;
-	addr.sin_addr.s_addr = inet_addr("0.0.0,0"); //0i oznachayet lyuboy adres
+	addr.sin_addr.s_addr = inet_addr("0.0.0.0"); //0i oznachayet lyuboy adres
 	addr.sin_port = htons(1500);
 
 	if (bind(socket_fd, (sockaddr*)&addr, sizeof(struct sockaddr_in)) == -1) 
@@ -56,25 +63,41 @@ int main()
 		return -1;
 	}
 	LOG("Connection accepted. ");
-
+/*
 	if (send(client_sock_fd, "Hello\n", 6, 0) == -1)
 	{
 		ERROR("Cannpt send");
 		return 1;
 	}
+*/
 
-	char buf[10];
+
+    const int buf_size =100;
+	char buf[buf_size];
 	ssize_t bytes;
-	if ((bytes = recv(client_sock_fd, buf, 10, 0)) == -1)
+	if ((bytes = recv(client_sock_fd, buf, buf_size, 0)) == -1)
 	{
 		ERROR("Cannot receive");
 		return 1;
 	}
-	buf[bytes] = 0;
+	buf[bytes-2] = 0;
 
 	LOG(buf)
+    auto matches = indexer.GetRelevantURLs(buf);
+	std::cout << "==========================================="<<std::endl;
+    std::copy(matches.begin(), matches.end(), std::ostream_iterator<std::string>(std::cout, ", "));
+	
+	for(auto i = matches.begin(); i != matches.end(); ++i)
+	{
+		send(client_sock_fd, i->c_str(), i->size(), 0);
+		send(client_sock_fd, "\n", 2, 0);
+
+	}
 
 	shutdown(client_sock_fd, SHUT_RDWR);
     close(client_sock_fd);
     close(socket_fd);
+
+	return 0;
 }
+
